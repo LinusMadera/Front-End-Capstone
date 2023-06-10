@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ogpBanner from "./assets/images/Logo.svg";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <meta name="og:title" content='Little Lemon restaurant, Chicago'/>
+    <meta name='og:description' content='Order online or book a table, the best traditional mediterranean dishes.'/>
+    <meta name='description' content='Order online or book a table, the best traditional mediterranean dishes.'/>
+    <meta name='image' content={ogpBanner}/>
     <App />
   </React.StrictMode>
 );
