@@ -1,10 +1,8 @@
 const Footer = () => {
     return (
-        <>
-          <figure>
-            <img src="path/to/image" alt="Footer" />
-          </figure>
-          <nav>
+        <footer>
+            <img src="" alt="Footer" />
+          <nav className="FooterNav">
             <h4>Doormat Navigation</h4>
             <ul>
               <li><a href="/">Home</a></li>
@@ -15,7 +13,7 @@ const Footer = () => {
               <li><a href="/login">Login</a></li>
             </ul>
           </nav>
-          <section>
+          <section className="FooterContact">
             <h4>Contact</h4>
             <address>
               <p>Chicago</p>
@@ -23,14 +21,14 @@ const Footer = () => {
             <p>Phone</p>
             <p>Email</p>
           </section>
-          <section>
+          <section className="FooterSocialMedia">
             <h4>Social Media Links</h4>
             <ul>
               <li><a href="https://www.facebook.com">Facebook</a></li>
               <li><a href="https://www.instagram.com">Instagram</a></li>
             </ul>
           </section>
-        </>
+        </footer>
       );
 }
 

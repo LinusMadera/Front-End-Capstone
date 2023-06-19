@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 10px;
+  overflow-x: auto;
+}
+.logo{
+  width: 150px;
+  height: auto;
+}
+.menu{
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+.menu li a{
+  text-decoration: none;
+
+}
+logo{
+  width: 100px;
+  height: auto;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  align-items: start;
+  padding: 1rem;
+  gap: auto;
+}
+.FooterNav{
+  display: grid;
+  grid-auto-flow: row;
+}
+.FooterContact{
+  display: grid;
+  grid-auto-flow: row;
+}
+.FooterSocialMedia{
+  display: grid;
+  grid-auto-flow: row;
 }
