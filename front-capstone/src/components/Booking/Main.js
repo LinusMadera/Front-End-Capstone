@@ -1,22 +1,28 @@
-import React, { useReducer } from 'react'
+import React, { useReducer,useState,useEffect } from 'react'
 import BookingForm from './BookingForm'
-import { useEffect } from 'react';
+import { fetchAPI } from '../../Api';
 
 
-export function updateTimes(state) {
-        return state
+export function updateTimes(state, action) {
+    if (action.type === "default") {
+    return fetchAPI(new Date(action.payload))
+    }
+    return state
 }
 export function initializeTimes(){
-    return["1PM","2PM","3PM","4PM"]
+    return fetchAPI(new Date())
 }
+
 export default function Main() {
     const [AvailableTimes, setAvailableTimes] = useReducer(updateTimes,initializeTimes());
-    useEffect ((AvailableTimes) => {
-        setAvailableTimes({type:"default"})
-    },[])
+    const [Date,setDate] = useState("");
+    useEffect(()=>{
+        console.log(Date+"This is being passed to the api")
+        setAvailableTimes({type:"default",payload:Date})
+    },[Date])
   return (
         <>
-        <BookingForm AvailableTimes={AvailableTimes} setAvailableTimes={setAvailableTimes}></BookingForm>
+        <BookingForm AvailableTimes={AvailableTimes} setAvailableTimes={setAvailableTimes} Date={Date} setDate={setDate}></BookingForm>
         </>
     )
 }
