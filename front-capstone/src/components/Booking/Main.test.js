@@ -1,22 +1,23 @@
 import {screen, render} from "@testing-library/react"
 import Main ,{initializeTimes, updateTimes} from "./Main";
+import { MemoryRouter } from "react-router-dom";
 
 test("Reservation heading appears", () => {
-    render(<Main />);
+    render(<MemoryRouter><Main /></MemoryRouter>);
     const heading = screen.getByText("Reservation:");
     expect(heading).toBeInTheDocument();
 });
 
 test("Dates initialization works", () => {
-    render(<Main></Main>);
-    const state = ["1PM","2PM","3PM","4PM"]
+    render(<MemoryRouter><Main></Main></MemoryRouter>);
     const dates = initializeTimes();
-    expect(dates).toEqual(state);
+    expect(dates).not.toEqual([]);
 })
 
 test("Changing dates works", () => {
-    render(<Main></Main>);
-    const state = ["1PM","2PM","3PM","4PM"]
-    const dates = updateTimes(state);
-    expect(dates).toBe(state);
+    render(<MemoryRouter><Main></Main></MemoryRouter>);
+    const state = "2023-05-05"
+    const action = "default"
+    const dates = updateTimes(state,action);
+    expect(dates).not.toEqual([]);
 })

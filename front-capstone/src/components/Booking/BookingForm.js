@@ -1,12 +1,16 @@
 import React,{ useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function BookingForm({Date,setDate, ...props}) {
     const [ChoosenTime, setChoosenTime] = useState("");
     const [NumOfGuests, setNumOfGuests] = useState(1);
     const [Occasion, setOccasion] = useState("");
+    const navigate = useNavigate();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.submitForm({ChoosenTime,NumOfGuests,Occasion},navigate)
     }
 
 

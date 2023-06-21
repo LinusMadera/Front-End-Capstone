@@ -7,6 +7,7 @@ import SpecialSection from './components/Special Section/SpecialSection';
 import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer';
 import Main from './components/Booking/Main';
+import BookingConfirmation from './components/Booking/BookingConfirmation';
 
 function MainRoutes() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path='/' element={<MainRoutes />} />
           <Route path='/booking' element={<Main/>}/>
+          <Route path='/bookingConfirmed' element={<BookingConfirmation/>}/>
         </Routes>
       <Footer />
     </Router>
