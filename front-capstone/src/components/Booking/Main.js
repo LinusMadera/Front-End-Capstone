@@ -1,7 +1,6 @@
 import React, { useReducer,useState,useEffect } from 'react'
 import BookingForm from './BookingForm'
 import { fetchAPI, submitAPI } from '../../Api';
-import { useNavigate } from 'react-router-dom';
 
 
 export function updateTimes(state, action) {
@@ -16,7 +15,7 @@ export function initializeTimes(){
 
 export default function Main() {
     const [AvailableTimes, setAvailableTimes] = useReducer(updateTimes,initializeTimes());
-    const [Date,setDate] = useState("");
+    const [SelectedDate,setSelectedDate] = useState("");
 
     function submitForm (formData,navigate){
         if (submitAPI(formData)){
@@ -25,12 +24,13 @@ export default function Main() {
     }
 
     useEffect(()=>{
-        console.log(Date+"This is being passed to the api")
-        setAvailableTimes({type:"default",payload:Date})
-    },[Date])
+        console.log(SelectedDate+"This is being passed to the api")
+        setAvailableTimes({type:"default",payload:SelectedDate})
+    },[SelectedDate])
+    console.log("Main.js Available times:"+AvailableTimes)
   return (
         <>
-        <BookingForm AvailableTimes={AvailableTimes} setAvailableTimes={setAvailableTimes} Date={Date} setDate={setDate} submitForm={submitForm}></BookingForm>
+        <BookingForm AvailableTimes={AvailableTimes} setAvailableTimes={setAvailableTimes} SelectedDate={SelectedDate} setSelectedDate={setSelectedDate} submitForm={submitForm}></BookingForm>
         </>
     )
 }
