@@ -298,7 +298,6 @@ logo{
   max-width: 30%;
   display: flex;
   flex-direction: column;
-
 }
 .aboutTitle {
   font-size: 5rem;
@@ -345,8 +344,11 @@ footer{
   align-items: start;
   padding: 1rem;
   gap: auto;
+  justify-items: center;
+  font-family: 'Karla';
 }
 .footerLogo{
+  margin-top: 2rem;
   width: 100px;
 }
 .FooterNav{
@@ -362,3 +364,156 @@ footer{
   grid-auto-flow: row;
 }
 
+
+.formTitle{
+  background-color: #495E57;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  color: #EDEFEE;
+  margin-block-start: 5px;
+  margin-bottom: 2rem;
+}
+.attributesReservation{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 8rem;
+  column-gap: 4rem;
+  justify-items:center ;
+  margin-bottom: 4rem;
+}
+label {
+  color: #495E57;
+  text-align: center;
+  font-family: 'Karla';
+  font-size: larger;
+  font-weight: 800;
+}
+label[for='numGuests']{
+  text-align: center;
+}
+#specialOccasion, #pickTime, #pickDate, #SubmitForm{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 1rem 4rem 1rem 4rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+#specialOccasion, #pickTime, #numGuests, #pickDate{
+  border: none;
+  display: flex;
+  text-align: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Karla;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+input[type="range"]::-webkit-slider-thumb{
+  background-color: #495E57;
+  color: #EDEFEE;
+  width: 30px;
+  height: 30px;
+}
+.formSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invalid {
+  color: #495E57;
+  background-color:#EDEFEE;
+}
+.valid{
+  color: #EDEFEE;
+  background-color:#495E57;
+
+}
+#SubmitForm {
+  max-width: 400px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  border-radius: 16px;
+  padding: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  outline: none;
+  background-color: #F4CE14;
+  font-size: 1.5rem;
+  font-family: 'Karla';
+  font-weight: 800;
+  text-transform: capitalize;
+}
+#SubmitForm:disabled{
+  opacity: 0.8;
+}
+#numGuests {
+  border-radius: 16px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: #495E57;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#numGuests:hover {
+  opacity: 1;
+}
+#numGuests::-webkit-slider-thumb {
+  border-radius: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #F4CE14;
+  cursor: pointer;
+}
+#numGuests::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #e3ece9;
+  cursor: pointer;
+}
+
+
+.confirmedSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.confirmedText{
+  font-size: 4rem;
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  color: #282c34;
+}
+.confirmedImage{
+  max-width: 250px;
+}
+.confirmedButton{
+  max-width: 400px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  border-radius: 16px;
+  padding: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  outline: none;
+  background-color: #F4CE14;
+  font-size: 1.5rem;
+  font-family: 'Karla';
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.confirmedButton:active{
+  background-color: #ee9972;
+  box-shadow: none;
+}

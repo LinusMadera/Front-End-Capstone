@@ -7,11 +7,11 @@ const Footer = () => {
             <h4>Doormat Navigation</h4>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/menu">Menu</a></li>
-              <li><a href="/bookingForm">Reservations</a></li>
-              <li><a href="/order-online">Order Online</a></li>
-              <li><a href="/login">Login</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">Menu</a></li>
+              <li><a href="/booking">Reservations</a></li>
+              <li><a href="/">Order Online</a></li>
+              <li><a href="/">Login</a></li>
             </ul>
           </nav>
           <section className="FooterContact">
@@ -19,8 +19,8 @@ const Footer = () => {
             <address>
               <p>Chicago</p>
             </address>
-            <p>Phone</p>
-            <p>Email</p>
+            <p>(000) 000-0000</p>
+            <p>LittleLemon@DoNotEmail.com</p>
           </section>
           <section className="FooterSocialMedia">
             <h4>Social Media Links</h4>

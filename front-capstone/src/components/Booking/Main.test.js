@@ -43,9 +43,9 @@ test('Form validation works', async () => {
     const submitButton = screen.getByTestId("SubmitForm");
 
     expect(submitButton).toBeDisabled();
-    fireEvent.change(screen.getByLabelText(/choose a time/i), { target: { value: '12:00' } });
-    fireEvent.change(screen.getByLabelText(/how many guests/i), { target: { value: 1 } });
-    fireEvent.change(screen.getByLabelText(/is there a special occasion/i), { target: { value: 'Birthday' } });
+    fireEvent.change(screen.getByLabelText(/select a time/i), { target: { value: '12:00' } });
+    fireEvent.change(screen.getByLabelText(/Guests/i), { target: { value: 1 } });
+    fireEvent.change(screen.getByLabelText(/Occasion/i), { target: { value: 'Birthday' } });
 
     await waitFor(() => expect(screen.getAllByTestId("SubmitForm")[0]).toBeEnabled());
 

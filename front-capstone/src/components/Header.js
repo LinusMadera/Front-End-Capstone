@@ -5,22 +5,22 @@ const Header = () => {
             <img className="logo" src={logo} alt="restaurant logo"/>
             <ul className="menu">
                 <li>
-                    <a aria-label='Home' href='/Home'>Home</a>
+                    <a aria-label='Home' href='/'>Home</a>
                 </li>
                 <li>
-                    <a aria-label='About' href='/About'>About</a>
+                    <a aria-label='About' href='/'>About</a>
                 </li>
                 <li>
-                    <a aria-label='Menu' href='/Menu'>Menu</a>
+                    <a aria-label='Menu' href='/'>Menu</a>
                 </li>
                 <li>
-                    <a aria-label='Reservations' href='/Reservations'>Reservations</a>
+                    <a aria-label='Reservations' href='/booking'>Reservations</a>
                 </li>
                 <li>
-                    <a aria-label='Order online' href='/Order Online'>Order Online</a>
+                    <a aria-label='Order online' href='/'>Order Online</a>
                 </li>
                 <li>
-                    <a aria-label='Login' href='/Login'>Login</a>
+                    <a aria-label='Login' href='/'>Login</a>
                 </li>
             </ul>
         </header>
