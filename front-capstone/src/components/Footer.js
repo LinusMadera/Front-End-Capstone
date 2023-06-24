@@ -1,14 +1,15 @@
+import logo from '../assets/images/logo2.png'
 const Footer = () => {
     return (
         <footer>
-            <img src="" alt="Footer" />
+            <img className='footerLogo' src={logo} alt="FooterLogo" />
           <nav className="FooterNav">
             <h4>Doormat Navigation</h4>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/menu">Menu</a></li>
-              <li><a href="/reservations">Reservations</a></li>
+              <li><a href="/bookingForm">Reservations</a></li>
               <li><a href="/order-online">Order Online</a></li>
               <li><a href="/login">Login</a></li>
             </ul>

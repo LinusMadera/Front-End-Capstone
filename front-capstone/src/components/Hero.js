@@ -1,14 +1,17 @@
 import React from 'react'
-import HeroImage from "../assets/images/bruchetta.svg"
+import HeroImage from "../assets/images/restauranfood.jpg"
 
 function Hero() {
   return (
-        <>
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <img src={HeroImage} alt='Bruchetta'/>
-        <button>Reserve a table</button>
-        </>
+        <section className="heroSection">
+          <div className='heroFlex'>
+            <h1 className='heroTitle'>Little Lemon</h1>
+            <h2 className='heroSubTitle'>Chicago</h2>
+            <p className='heroParagraph'>We are a family owned Mediterranean restaurant, focused on traditional recupes served with a modern twist.</p>
+            <button className='heroButton'>Reserve a table</button>
+          </div>
+        <img className='heroImage' src={HeroImage} alt='Bruchetta'/>
+        </section>
     )
 }
 
