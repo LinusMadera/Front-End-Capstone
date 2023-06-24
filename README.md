@@ -1,4 +1,4 @@
-#Meta fron-end Capstone project
+# Meta front-end Capstone project
 The project is fully written by me.
 # Getting Started with Create React App
 
